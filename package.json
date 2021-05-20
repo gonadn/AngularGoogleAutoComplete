@@ -1,6 +1,6 @@
 {
   "name": "angular-google-autocomplete",
-  "version": "0.0.6",
+  "version": "0.0.17",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,6 +9,7 @@
     "test": "ng test"
   },
   "dependencies": {
+    "@agm/core": "^3.0.0-beta.0",
     "@angular/animations": "~12.0.0",
     "@angular/common": "~12.0.0",
     "@angular/compiler": "~12.0.0",
@@ -17,8 +18,9 @@
     "@angular/platform-browser": "~12.0.0",
     "@angular/platform-browser-dynamic": "~12.0.0",
     "@angular/router": "~12.0.0",
-    "angular-google-autocomplete": "^0.0.6",
+    "angular-google-autocomplete": "^0.0.17",
     "angular-ng-autocomplete": "^2.0.5",
+    "google-maps": "^4.3.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"

@@ -11,7 +11,9 @@ import { AngularGoogleAutocompleteModule } from 'angular-google-autocomplete';
     BrowserModule,
     AngularGoogleAutocompleteModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
