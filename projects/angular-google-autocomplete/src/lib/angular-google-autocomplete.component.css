@@ -1,0 +1,12 @@
+
+.divIcon {
+  margin-right: 5px;
+  width: 10px;
+  margin-top: 13px;
+  margin-left: 10px;
+}
+
+.ng-autocomplete {
+  max-width: 100%;
+  width: 100%;
+}

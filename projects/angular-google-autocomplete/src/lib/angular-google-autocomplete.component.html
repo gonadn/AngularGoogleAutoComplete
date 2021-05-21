@@ -6,11 +6,21 @@
         (inputChanged)='onChangeSearch($event)'
         (inputFocused)='onFocused($event)'
         [itemTemplate]="itemTemplate"
-        [notFoundTemplate]="notFoundTemplate">
+        [notFoundTemplate]="notFoundTemplate"
+        placeholder="Adresse, Ole Brums vei 1">
       </ng-autocomplete>
 
       <ng-template #itemTemplate let-item>
-        <i class="fa fa-map-marker"></i><a [innerHTML]="item.description"></a>
+        <ul class="list-group">
+          <li class="list-group-item d-flex align-items-left">
+            <div class="image-parent divIcon">
+              <i class="fa fa-map-marker"></i>
+            </div>
+            <div style="float: left;">
+              <a [innerHTML]="item.description"></a>
+            </div>
+          </li>
+        </ul>
       </ng-template>
 
       <ng-template #notFoundTemplate let-notFound>

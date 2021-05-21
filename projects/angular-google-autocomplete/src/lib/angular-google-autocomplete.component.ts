@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {GoogleService} from './../services/google.service'
 declare let google: any;
 
@@ -6,8 +6,7 @@ declare let google: any;
 @Component({
   selector: 'angular-google-autocomplete',
   templateUrl: `./angular-google-autocomplete.component.html`,
-  styles: [
-  ]
+  styleUrls: [`./angular-google-autocomplete.component.css`]
 })
 
 export class AngularGoogleAutocompleteComponent implements OnInit {
@@ -20,6 +19,8 @@ export class AngularGoogleAutocompleteComponent implements OnInit {
   public currentPoslongitude: number = 0;
   public latitude: number = 0;
   public longitude: number = 0;
+  @Output() selectedPlace = new EventEmitter<any>();
+
   keyword = 'description';
 
   data = [
@@ -62,11 +63,11 @@ export class AngularGoogleAutocompleteComponent implements OnInit {
   selectEvent(item: any) {
     // do something with selected item
     console.log(item);
+    this.selectedPlace.emit(item);
   }
 
   onChangeSearch(textQuery: string) {
     if (textQuery !== undefined && textQuery !== null && textQuery !== "") {
-      console.log(textQuery);
       this.searchPlaces(textQuery);
     }
   }

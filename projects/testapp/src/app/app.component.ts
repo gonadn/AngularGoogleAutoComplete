@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'testapp';
+
+  constructor() { 
+    console.log(this);
+  }
+
+  public test(e: any) {
+    console.log(e);
+  }
 }
